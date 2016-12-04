@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Kruskal Visualization</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="options">
+        <div>
+            <h1>Kruskal Maze</h1>
+            <label for="dimensions">Size:</label> <input id="dimensions" type="number" name="dimensions" min="5" max="99" step="2" value="49"> <span id="sizeText">Medium</span>
+            <div>
+                <input id="verticalGradient" type="radio" name="colorType" value="verticalGradient"><label for="verticalGradient">Vertical Gradient</label>
+                <br>
+                <input id="horizontalGradient" type="radio" name="colorType" value="horizontalGradient"><label for="horizontalGradient">Horizontal Gradient</label>
+                <br>
+                <input id="random" type="radio" name="colorType" value="random" checked><label for="random">Random</label>
+                <br>
+                <label for="biasNumput">Passage Bias:</label> <input id="biasNumput" type="number" name="biasNumput" min="-49" max="49" value="0"> <span id="biasText"></span>
+                <br>
+                <span id="horizontal">=</span>
+                <input id="bias" type="range" name="bias" min="-49" max="49" value="0">
+                <span id="vertical">||</span>
+                <br>
+                <label for="speedNumput">Speed:</label> <input id="speedNumput" type="number" name="speedNumput" min="1" max="10" value="5">
+                <br>
+                <span id="slow">Slow</span>
+                <input id="speed" type="range" name="speed" min="1" max="10" value="5">
+                <span id="fast">Fast</span>
+            </div>
+            <button id="gen">Generate maze</button>
+        </div>
+    </div>
+    <div id="container">
+        <canvas id="canvas" width="600" height="600"></canvas>
+    </div>
+    <script src="script.js" charset="utf-8"></script>
+</body>
+</html>
